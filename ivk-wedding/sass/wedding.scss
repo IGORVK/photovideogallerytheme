@@ -1,0 +1,1176 @@
+@import "base/variables";   //variables
+
+@import "base/mixins";      //mixins
+
+@import "base/fonticon";    //font icons
+
+@import "base/wordpress";    //wordpress default classes
+
+//@import "base/custom-bootstap";    //custom-bootstrap classes
+
+/*
+  Generic
+  ==========================================================================
+*/
+html,body{
+  height: 100%;
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100%;
+}
+
+body{font-family: $body-font; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: greyscale;
+
+}
+.entry-title a{
+  color: #444444!important;
+  text-decoration: none;
+  cursor: pointer;
+}
+.content-area{
+   padding-top: 0px;
+
+}
+
+.background-image{
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.table-cell{
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+
+
+/*
+  Header
+  ==========================================================================
+*/
+#big-video{
+  position: relative;
+}
+
+
+.header-container {
+  position: relative;
+  display: block;
+  height: auto;
+  //@extend %text-shadow ;
+}
+
+.container-video-text{
+  position: absolute;
+  top:0;
+  left:0;
+}
+.site-title{
+
+  color: #fff;
+  margin: 0;
+  font-size: 80px;
+}
+
+.site-description{
+  font-size: 14px;
+  color: #fff;
+  margin-top: 0.4em;
+}
+
+/*
+  Video Background Sample
+  ==========================================================================
+*/
+
+.chr-size-image {
+  width: 100%!important;
+  height: auto!important;
+}
+
+div.container.container-ysg.text-center{
+  margin-bottom: 50px;
+  a strong{
+    color: $goldengreen;
+  }
+}
+
+/*Video Player Custom Controls*/
+#video_controls_bar{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  height: 26px;
+  opacity: 0;
+  padding: 5px;
+  background: rgb(255,255,255); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+
+}
+#video_controls_bar span, #video_controls_bar input, #video_controls_bar div{
+  display: inline-block;
+  float: left;
+}
+
+.video-container:hover #video_controls_bar{
+  opacity: 1;
+  @include animate( opacity , 720ms );
+   }
+
+
+/*input range style*/
+
+
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 0 0;
+  width: 100%;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  animate: 0.2s;
+  margin-top: 6px;
+  top: 7px;
+ // box-shadow: 1px 1px 1px #50555C;
+  background: #50555C;
+  border-radius: 8px;
+  border: 0px solid #000000;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 0px solid #000000;
+  height: 4px;
+  width: 3px;
+  border-radius: 0px;
+  margin-top: -4px;
+  background: #333333;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: 0.5px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #50555C;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  animate: 0.2s;
+ // box-shadow: 1px 1px 1px #50555C;
+  background: #50555C;
+  border-radius: 8px;
+  border: 0px solid #000000;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 0px solid #000000;
+  height: 4px;
+  width: 3px;
+  border-radius: 0px;
+  background: #333333;
+  cursor: pointer;
+}
+
+​input[type="range"]::-ms-tooltip {
+  display: none;
+}
+input[type=range]::-ms-track {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #50555C;
+  border: 0px solid #000000;
+  border-radius: 6px;
+ // box-shadow: 1px 1px 1px #50555C;
+}
+input[type=range]::-ms-fill-upper {
+  background: #50555C;
+  border: 0px solid #000000;
+  border-radius: 6px;
+ // box-shadow: 1px 1px 1px #50555C;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 0px solid #000000;
+  height: 4px;
+  width: 3px;
+  border-radius: 0px;
+  background: #333333;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #50555C;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #50555C;
+}
+
+/*End input range style*/
+#playpausebtn2{
+  width: 9%;
+  font-size: 1.2em;
+  cursor: pointer;
+  text-align: right;
+}
+
+input#seekslider{
+  width: 45%;
+  margin: 0 1%;
+}
+
+
+#curtimetext{
+  width: 12%;
+  margin: 0 0;
+  font-size: 0.8em;
+  font-family: Arial,Helvetica, sans-serif;
+  text-align: left;
+}
+
+#soundmutebtn{
+  width: 9%;
+  font-size: 1.2em;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: right;
+ }
+
+input#volumebar{
+  width: 15%;
+  margin: 0 1%;
+}
+
+
+
+#fullscreen{
+  width: 6%;
+  font-size: 1em;
+  cursor: pointer;
+  padding: 1px 0;
+  text-align: left;
+}
+
+
+
+
+#playpausebtn1 {
+  display: block;
+  cursor: pointer;
+  font-size: 3em;
+  margin: 10px;
+}
+
+/*EndVideo Player Custom Controls*/
+
+.homepage-hero-module {
+  border-right: none;
+  border-left: none;
+  position: relative;
+}
+
+.no-video .video-container video,
+.touch .video-container video {
+  display: none;
+}
+
+.no-video .video-container .poster,
+.touch .video-container .poster {
+  display: block !important;
+}
+
+.video-container {
+  position: relative;
+  bottom: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-container .poster img {
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+}
+
+.video-container .filter {
+  z-index: 100;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+}
+
+.video-container .title-container {
+  z-index: 1000;
+  position: absolute;
+  top: 22%;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+.video-container .description .inner {
+  font-size: 1em;
+  width: 45%;
+  margin: 0 auto;
+}
+
+.video-container .link {
+  position: absolute;
+  bottom: 3em;
+  width: 100%;
+  text-align: center;
+  z-index: 1001;
+  font-size: 2em;
+  color: #fff;
+}
+
+.video-container .link a {
+  color: #fff;
+}
+
+.video-container video {
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+}
+
+.video-container video.fillWidth {
+  width: 100%;
+}
+
+
+
+/*
+  Nav Bar
+  ==========================================================================
+*/
+
+.page-exerpt {
+ font-size: 24px;
+  color: $goldengreen;
+  font-family: 'Great Vibes', cursive;
+}
+.navbar-ivk_wedding{
+  padding: 22px;
+}
+
+.navbar-nav > li > a {
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+.navbar_fpr_theme, .nav, .navbar-default{
+  text-align: center;
+  border: none;
+  border-radius: 0;
+  min-height: auto;
+  margin-bottom: 0;
+  background: rgba(255,255,255,.1);
+  border-top: 1px solid rgba(255,255,255,.1) ;
+  ul{ float: none;}
+
+  li{ float: none; display: inline-block;
+    &.active {
+      a { opacity: 1.2; background-color: rgba(0,0,0,0)!important;
+       &:after { @include transform( translateY(15px) ); opacity: 1!important; }
+      }
+    }
+    &.open {
+      a { opacity: 1.2;background-color: rgba(0,0,0,0.1)!important;
+        &:after { @include transform( translateY(20px) ); opacity: 0!important; }
+        &:hover,
+        &:focus,
+        &:visited {background-color: rgba(0,0,0,0.1)!important;
+          &:after { @include transform( translateY(20px) ); opacity: 0!important; }
+        }
+      }
+    }
+
+    a{ text-transform: uppercase;
+      color: #262626!important;
+      font-size: 15px;
+      opacity: 0.7;
+      letter-spacing: 0.05em;
+      background: none;
+      @include animate( opacity, 320ms);
+      &:hover,
+      &:focus,
+      &:visited{
+        background: none;
+        opacity: 1.2;
+        &:after{
+          @include transform( translateY(15px) );
+          opacity: 1.2;
+        }
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        display: block;
+        left: 15px;
+        right: 15px;
+        bottom: 14px;
+        height: 2px;
+        background: #262626;
+        @include animate( all, 320ms );
+        opacity: 0;
+        @include transform( translateY(20px) );
+      }
+    }
+    ul.dropdown-menu { border: 0; border-radius: 0; background: rgba(0,0,0,0.2);
+      li { display: block;
+        a {
+          &:hover,
+          &:focus,
+          &:visited { background: rgba(0,0,0,0.25)!important; color: #fff; }
+        }
+      }
+    }
+  }
+}
+
+/*
+  Footer
+  ==========================================================================
+*/
+
+#footer{
+ // position: absolute;
+ // bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  .ivk_wedding-footer{/* Set the fixed height of the footer here */
+    background-color: #eaeaea;
+    /* Set the fixed height of the footer here */
+   // height: 60px;
+
+  }
+}
+/*
+  Style Sidebar
+  ==========================================================================
+*/
+.ivk_wedding-sidebar{
+padding: 60px 6%;
+}
+
+/* Search.php style
+============================================================================
+*/
+
+
+
+
+.findme h1 { font-size: 180%; margin-bottom: 20px; padding: 0 10px }
+.findme h2 { font-size: 120% }
+.findme ol { padding: 0 20px; list-style: decimal }
+.findme li { clear: left }
+.findme input { color: #454545; border: solid 1px #CCC; width: 150px; padding: 5px; font-size: 16px }
+.findme #searchsubmit:hover { color: white;}
+.findme #searchsubmit { padding: 5px }
+.findme .wrap-search {width: 180px; margin: 0 auto; margin-bottom: 40px;
+.ivk_wedding-search-text{width: 180px; }
+}
+ ol.find {width: 90%;   margin: 0 auto; margin-bottom: 40px;
+ a {color: #262626 !important;}
+ }
+
+
+/*
+  Style Search Form Widget
+  ==========================================================================
+*/
+section.ivk_wedding-widget.widget_search {
+  display: inline-block;
+  width: 230px;
+  margin-left: 9%;
+  margin-right: 0%;
+
+}
+
+.ivk_wedding-searchform{
+  width: 100px;
+  position: relative;
+}
+.ivk_wedding-widget-title{
+  text-align: left;
+}
+
+input[type=submit].ivk_wedding-search-submit{
+  height: 36px;
+  width: 36px;
+  display: inline-block;
+  color: red;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFNkYxNTUxQUNDODAxMUU2Qjg5MkVFMUI4OEREQTYzMyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFNkYxNTUxQkNDODAxMUU2Qjg5MkVFMUI4OEREQTYzMyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkU2RjE1NTE4Q0M4MDExRTZCODkyRUUxQjg4RERBNjMzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkU2RjE1NTE5Q0M4MDExRTZCODkyRUUxQjg4RERBNjMzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8++aT8PQAAAz9JREFUeNq8l1tIlEEUx+fTsifb8iWiMiHKiKDtAlb2YIRFFzKyIraiHiuKegh6sOyiQoQERUT0Ekq7QjeKYiGIpItIENIVzSJ8ycCKLkggtX39j9/5Yva438z3BduBnzvzzeWcOTNn5ugkL9SosOK6rl4tBCsBTbAATAFFIAP6wVNwRynnFkZ+8Qc5jpM15yj1b7ILHARTA9rHgVkgAeXf8HsaNIKfsmNBRMWTQDs4Z1AuJQbqQTdYKBujeIBW9BCU5Gh7DXrAZ1AMpoO46DMNdIJ14GZUA2LY/w52rS4pcJ4NkzID7Ab7xDm6gXMwH8Wu4S2gc2XHTQvlP8BqsMVXToeLD9haMBf0gv3siTfCiLuY16G5w5yBjWCxVv8NaAXpHH1T7N4uLwKG3f4MzAPvtH7jYcZJPoQUWkZOZetwarDSnlwhCpZon5aDV6AS/QfBMjHkAEbFbB6glU/W6vcw6LZ+H/iuZ6rxqZW9RDIGPAKloA80i/kTNgNqRf2YpT9Fw3ZQzqv3vXOZi02acSTrbQbM1MqfwIOQUfMWvqnE7xDXK2AEefMr6ND6ldsMmChWZ7ue9Ra6AS+K7SR5oR9G2z1QpJUHwyxd3PUNMLCCxuJ7Cxurz1NoM2BIK481PVLykWHp5xDUpVgrZ2xb8EHfrwgvpal9jn6ubAZ0a2V6A5bCySqbEXeBab4J4lLrtRlwVdSbyNM6QasNMOaQnN9mwGNxhS7CpLUhVysvK7qW94imtjBvwSZpNRTHoyQR6F8C2sXnBoqIAu/0Mn/9qtWVU8WPgi5PwIaQ+ikJec4pmy8D0FtPus0ecNUR/Gkecdq8fPAKQL6nqgJGxzlX6ORMSt+S6jAJyXEoP2xZ3RqmjxngFKwsIGwzUL6KPWI0AAmkWxdhm8sYk9DjtBm8NCelnttNys+CreKOsF1mNN9sqTyXB8wrdxx66/cqL/ySgNy5ghPWUn7/f4H3nKTeB9fElR5oQCMmrjPE8iV660U4pANSs9Dib4HR7VDehp9tKg9CBuyE8qMG5a3efzj5EaTl7hmD8hSnWHkT8sDoAOVJzvtVvg24nkN5C4da3oXeggSHynfwEZwAO9R/kj8CDAD6LRFMETN0ZQAAAABJRU5ErkJggg==') center center no-repeat;
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  text-indent: -10000px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.4;
+  cursor: pointer;
+  @include animate(opacity , 320ms );
+}
+
+input[type="submit"].ivk_wedding-search-submit:hover {
+  opacity: 0.8;
+}
+
+input[type=text].ivk_wedding-search-text{
+  border: none;
+  background-color: #EAEAEA;
+  border-bottom: 1px solid #333333;
+  padding: 15px 15px 15px 40px;
+  width: 165px;
+  text-align: left;
+  font-family: 'Amethysta', serif;
+}
+
+/*
+  Style iGo Profile Widget
+  ==========================================================================
+*/
+
+section.ivk_wedding-widget.ivk_wedding-profile-widget{
+  position: relative;
+  display: inline-block;
+  width: 230px;
+  margin-left: 9%;
+  margin-right: 0%;
+  margin-bottom: 15px;
+}
+div.ivk_wedding-widget.widget-igo-profile div.icons-wrapper{
+  margin-top: 21px;
+  position: relative;
+  bottom: -18px;
+  left: 0;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+div.ivk_wedding-widget.widget-igo-profile a{
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+  opacity: 0.5;
+  margin-right: 12px;
+  aling: left!important;
+  &:hover{
+    opacity: 0.8;
+    @include animate(opacity,320ms);
+
+  }
+}
+
+/*
+  Style iGo Contact Us Widget
+  ==========================================================================
+*/
+
+section.ivk_wedding-widget.ivk_wedding-contact-widget{
+  position: relative;
+  display: inline-block;
+  width: 230px;
+  margin-left: 9%;
+  margin-right: 0%;
+  margin-bottom: 15px;
+}
+
+div.ivk_wedding-widget.widget-igo-contact div.contact-wrapper{
+  margin-top: -5px;
+  position: relative;
+  bottom: -41px;
+  left: 0;
+  margin-bottom: 15px;
+  text-align: left;
+  font-family: 'Amethysta', serif;
+
+
+}
+
+div.contact-wrapper a{
+  text-decoration: none;
+  color: #000;
+  opacity: 0.5;
+  &:hover{
+    opacity: 0.8;
+    @include animate(opacity,320ms);
+
+  }
+}
+
+/*
+  Style iGo Contact Form
+  ==========================================================================
+*/
+
+
+.title-igo-contact-form {
+  font-size: 68px;
+  color: $goldengreen;
+  font-family: 'Great Vibes', cursive;
+  text-transform: capitalize;
+  text-align: center;
+}
+.igo-contacts{
+  text-align: left;
+.contact-wrapper{
+
+  font-size: 14px;
+  font-family: 'Gentium Book Basic', serif;
+  margin: 15px 0;
+  .phone{
+    margin-bottom: 5px;
+  }
+}
+}
+
+#igo-contact-form{
+  margin-top: 40px;
+  input,textarea{
+    background-color: transparent;
+    box-shadow: none;
+    color: #888;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #888;
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 20px;
+
+  }
+
+  .form-control-msg{
+    display: none;
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 14px;
+  }
+
+  .has-error{
+    border: 1px solid #c7254e;
+    .form-control-msg{
+      display: block;
+    }
+  }
+
+  .js-show-feedback{
+    display: block;
+  }
+
+
+
+    input.form-control {
+      margin-top: 14px;
+    }
+
+
+  textarea#message.form-control{
+
+      height: 42px;
+      margin-top: 56px;
+
+  }
+  button[type=submit]{
+    width: 150px;
+    border-radius: 0;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    background-color: $goldengreen;
+    border: none;
+  }
+}
+
+
+
+/* Pagination Style
+========================================================================================================================
+*/
+.container-pagination {
+  margin: 30px 0 30px;
+}
+
+.page-numbers{
+  font-family: Arial,Helvetica, sans-serif;
+  text-decoration: none;
+  border: 1px solid $goldengreen;
+  padding: 3px 7px;
+  margin: 2px;
+  color: $goldengreen;
+
+  &:hover,
+  &:active,
+  &:focus{
+    text-decoration: none;
+    color: $goldengreen;
+  }
+}
+span.current{
+  background: $goldengreen;
+  color: #fff;
+  border-color: $goldengreen;
+  font-weight: bold;
+}
+
+
+
+/*Masonry Gallery
+========================================================================================================================
+*/
+.elements-gride{
+  margin: 0 auto;
+}
+
+.element-item {
+  border: 2px solid transparent;
+  margin-bottom: 0;
+  padding: 1px;
+  width: 282px;
+  height: auto;
+
+  /*
+  box-shadow: 1px 2px 10px rgba(0,0,0, 0.6);
+  -webkit-box-shadow: 1px 2px 10px rgba(0,0,0, 0.6);
+  -moz-box-shadow: 1px 2px 10px rgba(0,0,0,, 0.6);
+  */
+
+}
+.element-item img {
+  width: 100%;
+  height: auto;
+}
+.element-item-title {
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  left: 0;
+  color: #fff;
+  font-family: 'Gentium Book Basic', serif;
+}
+
+/*Lightbox
+========================================================================================================================
+*/
+
+// You can customize Simplelightbox with the following variables:
+
+$sl-font-family: Arial, Baskerville, monospace;
+$sl-overlay-background: #fff;
+$sl-navigation-color: #000;
+$sl-caption-color: #fff;
+$sl-caption-background: #000;
+
+$sl-counter-fontsize: 1rem;
+$sl-close-fontsize: 3rem;
+
+$sl-breakpoint-medium: 35.5em; // 568px, when 1em == 16px
+$sl-breakpoint-large:  50em;   // 800px, when 1em == 16px
+
+$sl-arrow-fontsize-small:  2rem;
+$sl-arrow-fontsize-medium: 3rem;
+$sl-arrow-fontsize-large:  3rem;
+$sl-img-border-small:  0 none;
+$sl-img-border-medium: 0 none;
+$sl-img-border-large:  0 none;
+$sl-iframe-border-small:  0 none;
+$sl-iframe-border-medium: 0 none;
+$sl-iframe-border-large:  0 none;
+
+
+
+body.hidden-scroll {
+  overflow: hidden;
+}
+.sl-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: $sl-overlay-background;
+  opacity: 0.7;
+  display: none;
+  z-index: 1006;
+}
+.sl-wrapper {
+
+  z-index: 1000;
+  button {
+
+    border: 0 none;
+    background: transparent;
+    font-size: 28px;
+    padding: 0;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+button.sl-next, button.sl-prev {
+  &:focus {
+    outline: none;
+  }
+}
+
+  .sl-close {
+    display: none;
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    z-index: 1015;
+    margin-top: -14px;
+    margin-right: -14px;
+    height: 44px;
+    width: 44px;
+    line-height: 44px;
+    font-family: $sl-font-family;
+    /*color: $sl-navigation-color;*/
+    color: $goldengreen;
+    font-size: $sl-close-fontsize;
+  }
+
+  .sl-counter {
+    display: none;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    z-index: 1015;
+    /*color: $sl-navigation-color;*/
+    color: $goldengreen;
+    font-size: $sl-counter-fontsize;
+    font-family: Arial,sans-serif;
+  }
+
+  .sl-navigation {
+    width: 100%;
+    display: none;
+    button {
+      position: fixed;
+      top: 50%;
+      margin-top: -22px;
+      height: 44px;
+      width: 22px;
+      line-height: 44px;
+      text-align: center;
+      display: block;
+      z-index: 1015;
+      font-family: $sl-font-family;
+      /*color: $sl-navigation-color;*/
+      color: $goldengreen;
+      &.sl-next {
+        right: 5px;
+        font-size: $sl-arrow-fontsize-small;
+      }
+
+      &.sl-prev {
+        left: 5px;
+        font-size: $sl-arrow-fontsize-small;
+      }
+      @media (min-width: $sl-breakpoint-medium) {
+        width: 44px;
+
+        &.sl-next {
+          right: 10px;
+          font-size: $sl-arrow-fontsize-medium;
+        }
+
+        &.sl-prev {
+          left: 10px;
+          font-size: $sl-arrow-fontsize-medium;
+        }
+      }
+      @media (min-width: $sl-breakpoint-large) {
+        width: 44px;
+
+        &.sl-next {
+          right: 20px;
+          font-size: $sl-arrow-fontsize-large;
+        }
+
+        &.sl-prev {
+          left: 20px;
+          font-size: $sl-arrow-fontsize-large;
+        }
+      }
+    }
+  }
+
+  .sl-image {
+    position: fixed;
+    -ms-touch-action: none;
+    touch-action: none;
+    z-index: 10000;
+    img {
+      margin: 0;
+      padding: 0;
+      display: block;
+      border: $sl-img-border-small;
+      @media (min-width: $sl-breakpoint-medium) {
+        border: $sl-img-border-medium;
+      }
+      @media (min-width: $sl-breakpoint-large) {
+        border: $sl-img-border-large;
+      }
+
+    }
+    iframe {
+      background: #000;
+      border: $sl-iframe-border-small;
+      @media (min-width: $sl-breakpoint-medium) {
+        border: $sl-iframe-border-medium;
+      }
+      @media (min-width: $sl-breakpoint-large) {
+        border: $sl-iframe-border-large;
+      }
+    }
+    .sl-caption {
+      display: none;
+      padding: 10px;
+      color: $sl-caption-color;
+      background: $sl-caption-background;
+      opacity: 0.8;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      &.pos-top {
+        bottom: auto;
+        top: 0;
+      }
+
+      &.pos-outside {
+        bottom: auto;
+      }
+    }
+
+    .sl-download {
+      display: none;
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      color: $sl-navigation-color;
+      z-index: 1005;
+    }
+  }
+}
+
+.sl-spinner {
+  display: none;
+  border: 5px solid #333;
+  border-radius: 40px;
+  height: 40px;
+  left: 50%;
+  margin: -20px 0 0 -20px;
+  opacity: 0;
+  position: fixed;
+  top: 50%;
+  width: 40px;
+  z-index: 1007;
+  -webkit-animation: pulsate 1s ease-out infinite;
+  -moz-animation: pulsate 1s ease-out infinite;
+  -ms-animation: pulsate 1s ease-out infinite;
+  -o-animation: pulsate 1s ease-out infinite;
+  animation: pulsate 1s ease-out infinite;
+}
+
+.sl-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+@-webkit-keyframes pulsate{
+  0% {
+    transform: scale(.1);
+    opacity: 0.0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+@keyframes pulsate {
+  0% {
+    transform: scale(.1);
+    opacity: 0.0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes pulsate{
+  0% {
+    transform: scale(.1);
+    opacity: 0.0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+@-o-keyframes pulsate{
+  0% {
+    transform: scale(.1);
+    opacity: 0.0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes pulsate{
+  0% {
+    transform: scale(.1);
+    opacity: 0.0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+/*Youtube Gallery
+========================================================================================================================
+*/
+
+.chr-size-thumb {
+  height: auto!important;
+}
+
+/* Thickbox
+========================================================================================================================
+*/
+#TB_window {
+color: $goldengreen;
+
+}
+#TB_closeWindowButton:focus .tb-close-icon {
+  color: $goldengreen;
+  webkit-box-shadow: 0 0 0 1px $goldengreen, 0 0 2px 1px rgba(165, 154, 79, .8)!important;
+  box-shadow: 0 0 0 1px $goldengreen, 0 0 2px 1px rgba(165, 154, 79, .8)!important;
+}
+
+#TB_closeWindowButton:focus{
+  .tb-close-icon {
+       color: $goldengreen !important;
+
+     }
+
+}
+.tb-close-icon {
+  color: $goldengreen !important;
+
+}
+
+#TB_closeWindowButton{
+  .tb-close-icon {
+    &:focus,
+    &:active,
+    &:hover{
+    color: $goldengreen !important;}
+
+  }
+  .screen-reader-text{
+    &:focus,
+    &:active,
+    &:hover{
+      color: $goldengreen !important;}
+  }
+
+}
+
+/* Wordpress Post Style
+========================================================================================================================
+*/
+.entry-title{
+  text-align: center;
+}
+
+/*Loader
+========================================================================================================================
+*/
+
+.page_loader {
+  background: none repeat scroll 0 0 #ffffff;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+
+  .page_loader_inner {
+    background-image: url("../img/preloader.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-posirion: center center;
+    background-color: #fff;
+    height: 60px;
+    width: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+  }
+}
+
+
+
+@import "base/media-query";    //media-query
